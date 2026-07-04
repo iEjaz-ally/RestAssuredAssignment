@@ -32,6 +32,7 @@ public class DataProviders {
 			}
 			list.add(new Object[] {returnData});
 		}
+		utilities.closebook();
 		
 		return list.iterator();
 	}

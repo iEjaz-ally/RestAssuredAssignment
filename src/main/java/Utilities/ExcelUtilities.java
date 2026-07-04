@@ -3,7 +3,6 @@ package Utilities;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,9 +41,6 @@ public class ExcelUtilities {
 		workbook = new XSSFWorkbook(inputStream);
 		sheet = workbook.getSheet(sheetName);
 		int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
-		workbook.close();
-		inputStream.close();
-		
 		return rowCount;
 	}
 	public int getCellCount(String sheetName, int rowNum) throws IOException {
@@ -77,41 +73,7 @@ public class ExcelUtilities {
 		inputStream.close();
 		return dataString;
 	}
-	public ArrayList<Map<String,String>> readDataForPetExcel(String sheetName){
-		
-		ArrayList<Map<String,String>> data= new ArrayList<>();
-		 DataFormatter formatter = new DataFormatter();
-		
-		try{
-			inputStream = new FileInputStream(filePathString);
-			workbook = new XSSFWorkbook(inputStream);
-			sheet= workbook.getSheet(sheetName);
-			
-			XSSFRow headerRow = sheet.getRow(0);
-			int rowCOunt = sheet.getPhysicalNumberOfRows();
-			int columnCount = headerRow.getPhysicalNumberOfCells();
-			
-			for(int i = 1 ;i <rowCOunt; i++) {
-				XSSFRow rows = sheet.getRow(i);
-				HashMap<String, String> DataMap = new HashMap<>();
-				for(int j=0;j<columnCount;j++) {
-					XSSFCell headerCell = headerRow.getCell(j);
-					XSSFCell valueCell = rows.getCell(j);
-					DataMap.put(headerCell.getStringCellValue(), valueCell!=null? formatter.formatCellValue(valueCell) : " ");
-					
-				}
-				data.add(DataMap);
-			}
-			
-			
-		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-		return data;
-		
-	
-	}
+
 public Map<String,String> readDataForPetExcel1(String sheetName, int rowNum, int cellNum){
 		 DataFormatter formatter = new DataFormatter();
 		 HashMap<String, String> data = new HashMap<>();
@@ -125,7 +87,7 @@ public Map<String,String> readDataForPetExcel1(String sheetName, int rowNum, int
 			XSSFCell headerCell = headerRow.getCell(cellNum);
 			XSSFCell celldataCell = row.getCell(cellNum);
 			
-			data.put(headerCell.getStringCellValue(), celldataCell!=null? formatter.formatCellValue(celldataCell) : " "); 
+			data.put(headerCell.getStringCellValue(), celldataCell!=null? formatter.formatCellValue(celldataCell) : " ");
 		
 			
 			
@@ -135,24 +97,11 @@ public Map<String,String> readDataForPetExcel1(String sheetName, int rowNum, int
 		}
 		return data;
 	}
-public Map<String, String> readDataFromExcelForStore(String sheetName, int rowNum, int cellNum){
-	DataFormatter formatter = new DataFormatter();
-	Map<String, String> dataMap = new HashMap<String, String>();
-	try {
-		inputStream = new FileInputStream(filePathString);
-		workbook = new XSSFWorkbook(inputStream);
-		sheet  = workbook.getSheet(sheetName);
-		XSSFRow headerRow = sheet.getRow(0);
-		XSSFCell headerCell = headerRow.getCell(cellNum);
-		
-		XSSFCell valueCell =sheet.getRow(rowNum).getCell(cellNum);		
-		dataMap.put(headerCell.getStringCellValue(), valueCell==null ? " " : formatter.formatCellValue(valueCell));
-		
-	}catch (Exception e) {
-		// TODO: handle exception
-		System.out.println(e.getMessage());
-	}
-	return dataMap;
+public void closebook() throws IOException {
+
+	workbook.close();
+	inputStream.close();
 }
+
 	
 }
