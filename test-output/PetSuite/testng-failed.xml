@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PetSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="PetTests(failed)">
+    <classes>
+      <class name="APITest.PetServicesAPITest">
+        <methods>
+          <include name="getPet"/>
+          <include name="deletePet"/>
+          <include name="updatePet"/>
+          <include name="postPet"/>
+        </methods>
+      </class> <!-- APITest.PetServicesAPITest -->
+    </classes>
+  </test> <!-- PetTests(failed) -->
+</suite> <!-- Failed suite [PetSuite] -->
