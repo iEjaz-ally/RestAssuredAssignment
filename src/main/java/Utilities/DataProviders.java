@@ -28,7 +28,6 @@ public class DataProviders {
 			HashMap<String, String> returnData = new HashMap<>();
 			for(int j=0;j<cellCount;j++) {
 				returnData.putAll(utilities.readDataForPetExcel1(utilities.getSheetName(1), i, j));
-			
 			}
 			list.add(new Object[] {returnData});
 		}
