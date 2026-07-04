@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-04T12:31:30 IST" name="Default suite" finished-at="2026-07-04T12:31:43 IST" duration-ms="13191">
+  <suite started-at="2026-07-04T12:36:44 IST" name="Default suite" finished-at="2026-07-04T12:36:56 IST" duration-ms="12328">
     <groups>
     </groups>
-    <test started-at="2026-07-04T12:31:30 IST" name="Default test" finished-at="2026-07-04T12:31:43 IST" duration-ms="13191">
+    <test started-at="2026-07-04T12:36:44 IST" name="Default test" finished-at="2026-07-04T12:36:56 IST" duration-ms="12328">
       <class name="APITest.PetServicesAPITest">
-        <test-method signature="postPet(java.util.HashMap)[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:31:31 IST" name="postPet" data-provider="dataProviderForPets" finished-at="2026-07-04T12:31:35 IST" duration-ms="4006" status="PASS">
+        <test-method signature="postPet(java.util.HashMap)[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:36:45 IST" name="postPet" data-provider="dataProviderForPets" finished-at="2026-07-04T12:36:49 IST" duration-ms="3880" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postPet -->
-        <test-method signature="postPet(java.util.HashMap)[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:31:35 IST" name="postPet" data-provider="dataProviderForPets" finished-at="2026-07-04T12:31:37 IST" duration-ms="1941" status="PASS">
+        <test-method signature="postPet(java.util.HashMap)[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:36:49 IST" name="postPet" data-provider="dataProviderForPets" finished-at="2026-07-04T12:36:50 IST" duration-ms="1667" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,15 +29,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postPet -->
-        <test-method signature="updatePet()[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:31:37 IST" name="updatePet" finished-at="2026-07-04T12:31:38 IST" depends-on-methods="APITest.PetServicesAPITest.postPet" duration-ms="1725" status="PASS">
+        <test-method signature="updatePet()[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:36:50 IST" name="updatePet" finished-at="2026-07-04T12:36:52 IST" depends-on-methods="APITest.PetServicesAPITest.postPet" duration-ms="1477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updatePet -->
-        <test-method signature="getPet()[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:31:38 IST" name="getPet" finished-at="2026-07-04T12:31:41 IST" depends-on-methods="APITest.PetServicesAPITest.updatePet" duration-ms="2799" status="PASS">
+        <test-method signature="getPet()[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:36:52 IST" name="getPet" finished-at="2026-07-04T12:36:54 IST" depends-on-methods="APITest.PetServicesAPITest.updatePet" duration-ms="2593" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPet -->
-        <test-method signature="deletePet()[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:31:41 IST" name="deletePet" finished-at="2026-07-04T12:31:43 IST" depends-on-methods="APITest.PetServicesAPITest.getPet" duration-ms="1640" status="FAIL">
+        <test-method signature="deletePet()[pri:0, instance:APITest.PetServicesAPITest@5e0e82ae]" started-at="2026-07-04T12:36:54 IST" name="deletePet" finished-at="2026-07-04T12:36:56 IST" depends-on-methods="APITest.PetServicesAPITest.getPet" duration-ms="1686" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.

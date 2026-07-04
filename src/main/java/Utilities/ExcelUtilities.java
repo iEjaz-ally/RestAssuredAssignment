@@ -3,6 +3,7 @@ package Utilities;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -97,6 +98,7 @@ public Map<String,String> readDataForPetExcel1(String sheetName, int rowNum, int
 	}
 public void closebook() throws IOException {
 
+	if(workbook!=null || inputStream!=null)
 	workbook.close();
 	inputStream.close();
 }
